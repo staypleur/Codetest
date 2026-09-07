@@ -7,7 +7,7 @@ int main() {
     int cnt3 = 0;
     scanf("%d", &n);
     for (int i = 1; i <= n; i++) {
-        if (n >= 12 && i % 12 == 0) {
+        if ( i % 12 == 0) {
             cnt3++;
         }
         else if (i % 3 == 0) {
