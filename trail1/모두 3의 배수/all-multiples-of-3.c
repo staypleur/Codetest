@@ -2,12 +2,14 @@
 #include <stdbool.h>
 
 int main() {
-    int a, b, c, d, e;
-    scanf("%d\n%d\n%d\n%d\n%d", &a, &b, &c, &d, &e);
-    bool sat = false;
-    if (a % 3 == 0 && b % 3 == 0 && c % 3 == 0 && d % 3 == 0 && e % 3 == 0) {
-        sat = true;
-    }
+    bool sat = true;
+    for(int i = 0; i <= 5; i++) {{
+        int a;
+        scanf("%d", &a);
+        if (a % 3 != 0) {
+            sat = false;
+        }
+    }}
 
     if (sat == true) {
         printf("1");
