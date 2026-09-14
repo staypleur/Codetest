@@ -14,7 +14,7 @@ int main() {
         for (int j = 0; j <= cnt; j++) {
             printf("%d * %d = %d ", c, i, c * i);
             c -= 2;
-            if (c == a -2) {
+            if (c == a - 2) {
                 c = b;
             }
             if (j < cnt) {
