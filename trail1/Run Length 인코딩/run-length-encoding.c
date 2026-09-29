@@ -2,44 +2,22 @@
 #include <string.h>
 
 int main() {
-    char ch[1000];
-    scanf("%s", ch);
-    
-
-    int len = strlen(ch);
-    int cnt = 1;
-    int result = 0;
-
-    for (int i = 1; i <= len; i++) {
-        if (i < len && ch[i] == ch[i-1]) {
+    char a[1000];
+    char b[1000];
+    scanf("%s", a);
+    int len = strlen(a);
+    int i = 0, c = 0;
+    while (i < len) {
+        int cnt = 0;
+        while (c < len && a[i] == a[c]) {
+            c++;
             cnt++;
         }
-        else {
-            result++;
-            int temp = cnt;
-
-            while (temp > 0) {
-                result++;
-                temp /= 10;
-            }
-
-            cnt = 1;
-        }
+        char temp[5];
+        sprintf(temp, "%c%d", a[i], cnt);
+        strcat(b, temp); 
+        i = c;
     }
-
-    printf("%d\n", result);
-
-    cnt = 1;
-
-    for (int i = 1; i <= len; i++) {
-        if (i < len && ch[i] == ch[i-1]) {
-            cnt++;
-        }
-        else {
-            printf("%c%d", ch[i-1], cnt);
-            cnt = 1;
-        }
-    }
-    // Please write your code here.
+    printf("%d\n%s",strlen(b),b); 
     return 0;
 }
